@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturel 天然品 - 嘉義「愛玩美實驗室」全新盛大誌慶</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#3a7d64',     // 品牌主色 (優雅森林綠)
+                        'brand-dark': '#1e3d31',      // 品牌深色背景
+                        'brand-beige': '#fbfaf7',     // 暖白輕奢背景
+                        'brand-light-green': '#eaf1ed', // 淺綠輔助色
+                        'brand-gold': '#c5a880',      // 金色飾邊點綴
+                        'brand-accent': '#c62828'     // 醒目特惠紅
+                    },
+                    fontFamily: {
+                        'serif': ['Noto Serif TC', 'Georgia', 'serif'],
+                        'sans': ['Noto Sans TC', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fbfaf7;
+            background-image: radial-gradient(rgba(58, 125, 100, 0.03) 1px, transparent 0), radial-gradient(rgba(58, 125, 100, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .serif-font {
+            font-family: 'Noto Serif TC', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fbfaf7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3a7d64;
+            border-radius: 4px;
+        }
+
+        /* 智慧裁剪背景圖樣式類 */
+        .dm1-crop {
+            background-image: url('699064497_1493536259232551_6738137329486016331_n.jpg');
+            background-repeat: no-repeat;
+            transition: transform 0.5s ease;
+        }
+        .dm2-crop {
+            background-image: url('699200825_1493536359232541_4340831424092097616_n.jpg');
+            background-repeat: no-repeat;
+            transition: transform 0.5s ease;
+        }
+
+        /* 當本地圖片遺失時的後備樣式（由JS控制啟用） */
+        .fallback-active .dm1-crop,
+        .fallback-active .dm2-crop {
+            background-image: linear-gradient(135deg, #eaf1ed 0%, #c5a880 100%) !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        .fallback-active .fallback-icon {
+            display: flex !important;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-green/10 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo with name -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <img class="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300" src="logo.jpg" alt="Naturel 天然品 LOGO" onerror="this.src='https://placehold.co/150x150/3a7d64/ffffff?text=Naturel'">
+                    <div class="border-l border-brand-green/30 pl-3 hidden sm:block">
+                        <span class="block serif-font font-bold text-lg tracking-wider text-brand-green">天然品</span>
+                        <span class="block text-xs tracking-widest text-gray-400">VALUE & CUSTOM SKINCARE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-brand-green font-medium transition-colors">品牌傳承</a>
+                    <a href="#lab" class="text-gray-600 hover:text-brand-green font-medium transition-colors flex items-center gap-1">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+                        愛玩美體驗室
+                    </a>
+                    <a href="#promotions" class="text-gray-600 hover:text-brand-green font-medium transition-colors">開幕限定</a>
+                    <a href="#catalog" class="text-gray-600 hover:text-brand-green font-medium transition-colors">精選組合</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brand-green font-medium transition-colors">門市資訊</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="flex items-center gap-4">
+                    <a href="https://lin.ee/seoZIJS" target="_blank" class="bg-brand-green text-white hover:bg-brand-dark px-5 py-2.5 rounded-full text-sm font-semibold tracking-wider flex items-center gap-2 transition-all shadow-md shadow-brand-green/20 hover:shadow-lg">
+                        <i class="fab fa-line text-lg text-green-400"></i>
+                        <span>加入 LINE 好友</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-brand-light-green/30 to-transparent">
+            <div class="absolute top-10 right-0 w-96 h-96 rounded-full bg-brand-light-green/40 blur-3xl -z-10"></div>
+            <div class="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Text Info Left -->
+                    <div class="lg:col-span-5 text-center lg:text-left space-y-6">
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs sm:text-sm font-bold tracking-widest uppercase">
+                            <i class="fas fa-sparkles text-brand-gold"></i> 光采煥新．奢華盛放
+                        </span>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl tracking-tight serif-font font-bold text-gray-900 leading-tight">
+                            天然品 <br>
+                            <span class="text-brand-green relative inline-block">
+                                盛大誌慶
+                                <span class="absolute left-0 bottom-1 w-full h-2.5 bg-brand-gold/30 -z-10"></span>
+                            </span>
+                        </h1>
+                        
+                        <p class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            「天然品」全新門市盛大登陸嘉義！攜手深耕在地 20 餘年護膚匠心，為您提供專屬的「價值保養．輕奢香氛」體驗。
+                        </p>
+
+                        <!-- Activity Period -->
+                        <div class="bg-white/80 p-5 rounded-2xl border border-brand-green/10 inline-block shadow-sm">
+                            <span class="text-xs font-bold tracking-widest text-brand-green block uppercase mb-1">
+                                <i class="far fa-calendar-alt mr-1"></i> 活動限定期間
+                            </span>
+                            <span class="text-lg sm:text-xl font-bold text-brand-dark block tracking-wide serif-font">
+                                26.05.23 (六) – 26.06.22 (一)
+                            </span>
+                        </div>
+
+                        <!-- CTA Links -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#lab" class="bg-brand-gold text-brand-dark hover:bg-brand-dark hover:text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-md shadow-brand-gold/30 flex items-center gap-2">
+                                <i class="fas fa-flask"></i> 預約 DIY 體驗
+                            </a>
+                            <a href="#promotions" class="bg-white border-2 border-brand-green/20 text-brand-green hover:bg-brand-light-green/30 px-8 py-3.5 rounded-xl font-bold transition-all flex items-center gap-2">
+                                探索特惠方案 <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- DM Main Banner Right -->
+                    <div class="lg:col-span-7">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-green to-brand-gold rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
+                            
+                            <div class="relative bg-white p-4 rounded-3xl border border-brand-green/10 shadow-2xl overflow-hidden aspect-[4/3] sm:aspect-auto">
+                                <img src="699064497_1493536259232551_6738137329486016331_n.jpg" 
+                                     alt="天然品開幕誌慶 DM 主打" 
+                                     class="w-full h-full object-cover object-top rounded-2xl hover:scale-[1.02] transition-transform duration-700 ease-out"
+                                     onerror="this.src='https://placehold.co/800x600/3a7d64/ffffff?text=Naturel+Grand+Opening'">
+                                
+                                <!-- Floating Interactive Tag -->
+                                <div class="absolute bottom-6 right-6 bg-brand-dark/95 backdrop-blur-md text-white py-3 px-5 rounded-2xl shadow-xl flex items-center gap-3 border border-brand-gold/30">
+                                    <span class="flex h-3 w-3 relative">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-gold"></span>
+                                    </span>
+                                    <div class="text-left">
+                                        <p class="text-xs text-brand-gold/90 font-bold tracking-widest">開幕慶主打</p>
+                                        <p class="text-sm font-semibold">奢華盛大組特惠 $5000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRAND STORY SECTION -->
+        <section id="about" class="py-20 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Left: Trust Graphics / Badges -->
+                    <div class="relative order-2 lg:order-1">
+                        <div class="absolute -top-10 -left-10 w-48 h-48 bg-brand-light-green rounded-full -z-10 opacity-60"></div>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-6">
+                                <div class="bg-brand-beige p-8 rounded-3xl border border-brand-green/5 shadow-sm text-center transform hover:-translate-y-1 transition-all duration-300">
+                                    <div class="w-16 h-16 mx-auto bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center text-3xl mb-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-brand-dark mb-1">深耕嘉義</h4>
+                                    <p class="text-xs text-gray-500">20 餘年在地信任，僅此一家，別無分號</p>
+                                </div>
+                                <div class="bg-brand-beige p-8 rounded-3xl border border-brand-green/5 shadow-sm text-center transform hover:-translate-y-1 transition-all duration-300">
+                                    <div class="w-16 h-16 mx-auto bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center text-3xl mb-4">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-brand-dark mb-1">自有化妝品廠</h4>
+                                    <p class="text-xs text-gray-500">背後強大研發與無菌生產線支持，安全有保障</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-6 pt-10">
+                                <div class="bg-brand-beige p-8 rounded-3xl border border-brand-green/5 shadow-sm text-center transform hover:-translate-y-1 transition-all duration-300">
+                                    <div class="w-16 h-16 mx-auto bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center text-3xl mb-4">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-brand-dark mb-1">純粹原料</h4>
+                                    <p class="text-xs text-gray-500">拒絕非必要化學添加，只給肌膚奢華高效滋養</p>
+                                </div>
+                                <div class="bg-brand-beige p-8 rounded-3xl border border-brand-green/5 shadow-sm text-center transform hover:-translate-y-1 transition-all duration-300">
+                                    <div class="w-16 h-16 mx-auto bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center text-3xl mb-4">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-brand-dark mb-1">價值保養</h4>
+                                    <p class="text-xs text-gray-500">透明配方與高純度原液，打破輕奢極限</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <div class="flex items-center gap-2 text-brand-gold font-bold text-sm tracking-widest uppercase">
+                            <span class="w-8 h-[1px] bg-brand-gold"></span> 關於天然品 HERITAGE
+                        </div>
+                        
+                        <h2 class="text-3xl sm:text-4xl serif-font font-bold text-gray-900 leading-snug">
+                            打造嘉義人專屬的 <br>
+                            <span class="text-brand-green">價值保養．輕奢香氛</span>
+                        </h2>
+                        
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            我們深耕嘉義 20 餘年，秉持「僅此一家，別無分號」的職人堅持。門市背後是我們<b>自有專業化妝品廠</b>的堅實支持，確保每一瓶保養原液、每一滴天然植萃，都在符合國家標準的高規格潔淨空間中生產，為您省去層層經銷，將最高的純度與安全，直接呈獻給最珍貴的您。
+                        </p>
+
+                        <div class="p-6 bg-brand-light-green/30 rounded-2xl border-l-4 border-brand-green">
+                            <p class="text-brand-dark font-medium leading-relaxed italic text-sm sm:text-base">
+                                「保養品不應是昂貴包裝與廣告噱頭的堆砌，而是實實在在的純淨成分與對肌膚需求的溫柔傾聽。」
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE DIY LAB EXPERIENCE -->
+        <section id="lab" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-brand-green/20 blur-3xl"></div>
+            <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-brand-gold/10 blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-brand-gold font-bold tracking-widest text-sm uppercase block">
+                        <i class="fas fa-flask mr-2 animate-bounce"></i> 新門市亮點：愛玩美實驗室
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl serif-font font-bold">
+                        親手調配專屬保養與香氛
+                    </h2>
+                    <p class="text-brand-light-green/80 text-sm sm:text-base max-w-2xl mx-auto">
+                        「天然品」新門市主打「DIY保養品」體驗，讓消費者能依照自身膚質、喜好與需求，親手調配專屬保養與香氛產品，打造如同個人「愛玩美實驗室」般的新型態美妝空間。
+                    </p>
+                </div>
+
+                <!-- Interactive Lab Application -->
+                <div class="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                        
+                        <!-- Left Controls Column -->
+                        <div class="lg:col-span-7 space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-gold flex items-center gap-2 mb-4 serif-font">
+                                    <span class="w-6 h-6 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-xs font-bold">1</span>
+                                    選擇您的肌膚需求
+                                </h3>
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="skin-concerns">
+                                    <button onclick="selectSkinConcern('hydration', this)" class="skin-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/30 hover:border-brand-green transition-all text-center flex flex-col items-center gap-2 active">
+                                        <i class="fas fa-droplet text-blue-400 text-xl"></i>
+                                        <span class="text-xs font-medium">缺水乾燥</span>
+                                    </button>
+                                    <button onclick="selectSkinConcern('brightening', this)" class="skin-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/30 hover:border-brand-green transition-all text-center flex flex-col items-center gap-2">
+                                        <i class="fas fa-wand-magic-sparkles text-yellow-300 text-xl"></i>
+                                        <span class="text-xs font-medium">暗沉蠟黃</span>
+                                    </button>
+                                    <button onclick="selectSkinConcern('aging', this)" class="skin-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/30 hover:border-brand-green transition-all text-center flex flex-col items-center gap-2">
+                                        <i class="fas fa-spa text-pink-400 text-xl"></i>
+                                        <span class="text-xs font-medium">鬆弛細紋</span>
+                                    </button>
+                                    <button onclick="selectSkinConcern('soothing', this)" class="skin-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/30 hover:border-brand-green transition-all text-center flex flex-col items-center gap-2">
+                                        <i class="fas fa-shield-halved text-green-400 text-xl"></i>
+                                        <span class="text-xs font-medium">敏感脆弱</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-gold flex items-center gap-2 mb-4 serif-font">
+                                    <span class="w-6 h-6 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-xs font-bold">2</span>
+                                    挑選調配基底 (Base)
+                                </h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <label class="relative flex items-center gap-3 p-4 rounded-xl border border-brand-green bg-brand-green/10 cursor-pointer transition-all" id="base-serum-label">
+                                        <input type="radio" name="base-select" value="serum" checked onchange="selectBase('serum')" class="accent-brand-gold w-4 h-4">
+                                        <div>
+                                            <span class="block text-sm font-bold">玻尿酸高保濕精華</span>
+                                            <span class="block text-xxs text-brand-light-green/60">深度鎖水修護極佳</span>
+                                        </div>
+                                    </label>
+                                    <label class="relative flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:bg-white/10 transition-all" id="base-cream-label">
+                                        <input type="radio" name="base-select" value="cream" onchange="selectBase('cream')" class="accent-brand-gold w-4 h-4">
+                                        <div>
+                                            <span class="block text-sm font-bold">輕盈水透修護霜</span>
+                                            <span class="block text-xxs text-brand-light-green/60">滋潤鎖水、清爽好吸收</span>
+                                        </div>
+                                    </label>
+                                    <label class="relative flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:bg-white/10 transition-all" id="base-essence-label">
+                                        <input type="radio" name="base-select" value="essence" onchange="selectBase('essence')" class="accent-brand-gold w-4 h-4">
+                                        <div>
+                                            <span class="block text-sm font-bold">香氛洗沐/洗髮露基底</span>
+                                            <span class="block text-xxs text-brand-light-green/60">親膚洗淨，自由玩香</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-gold flex items-center gap-2 mb-2 serif-font">
+                                    <span class="w-6 h-6 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-xs font-bold">3</span>
+                                    注入強效核心原液 (最多選擇 3 款)
+                                </h3>
+                                <p class="text-xs text-brand-light-green/60 mb-4">點擊選用您想在「愛玩美實驗室」調配注入的原液：</p>
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                    <button onclick="toggleBooster('vitaminC', this)" class="booster-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/20 transition-all text-left flex flex-col justify-between h-24 relative overflow-hidden">
+                                        <div class="flex justify-between items-start w-full">
+                                            <i class="fas fa-droplet text-yellow-300"></i>
+                                            <span class="text-xxs font-bold text-yellow-300">美白亮采</span>
+                                        </div>
+                                        <span class="text-xs font-bold block mt-2">15%維他命C</span>
+                                        <div class="active-badge absolute top-1 right-1 hidden"><i class="fas fa-check-circle text-brand-gold text-xs"></i></div>
+                                    </button>
+                                    <button onclick="toggleBooster('peptides', this)" class="booster-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/20 transition-all text-left flex flex-col justify-between h-24 relative overflow-hidden">
+                                        <div class="flex justify-between items-start w-full">
+                                            <i class="fas fa-droplet text-purple-300"></i>
+                                            <span class="text-xxs font-bold text-purple-300">抗皺緊實</span>
+                                        </div>
+                                        <span class="text-xs font-bold block mt-2">五胜肽原液</span>
+                                        <div class="active-badge absolute top-1 right-1 hidden"><i class="fas fa-check-circle text-brand-gold text-xs"></i></div>
+                                    </button>
+                                    <button onclick="toggleBooster('colla', this)" class="booster-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/20 transition-all text-left flex flex-col justify-between h-24 relative overflow-hidden">
+                                        <div class="flex justify-between items-start w-full">
+                                            <i class="fas fa-droplet text-pink-300"></i>
+                                            <span class="text-xxs font-bold text-pink-300">澎潤飽滿</span>
+                                        </div>
+                                        <span class="text-xs font-bold block mt-2">嬰兒膠原原液</span>
+                                        <div class="active-badge absolute top-1 right-1 hidden"><i class="fas fa-check-circle text-brand-gold text-xs"></i></div>
+                                    </button>
+                                    <button onclick="toggleBooster('botanical', this)" class="booster-btn p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-brand-green/20 transition-all text-left flex flex-col justify-between h-24 relative overflow-hidden">
+                                        <div class="flex justify-between items-start w-full">
+                                            <i class="fas fa-droplet text-green-300"></i>
+                                            <span class="text-xxs font-bold text-green-300">鎮靜舒緩</span>
+                                        </div>
+                                        <span class="text-xs font-bold block mt-2">七合一植萃</span>
+                                        <div class="active-badge absolute top-1 right-1 hidden"><i class="fas fa-check-circle text-brand-gold text-xs"></i></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Interactive Beaker Display Column -->
+                        <div class="lg:col-span-5 flex flex-col items-center justify-between bg-white/5 p-6 rounded-3xl border border-white/10 relative">
+                            <div class="absolute inset-0 bg-radial-gradient(ellipse at center, rgba(58,125,100,0.1) 0%, transparent 70%)"></div>
+                            
+                            <div class="text-center w-full z-10">
+                                <h4 class="serif-font text-lg font-bold text-brand-gold mb-2">愛玩美實驗調配結果</h4>
+                                <div class="h-[1px] w-12 bg-brand-gold mx-auto mb-6"></div>
+                            </div>
+
+                            <!-- Animated Mix Beaker Graphic -->
+                            <div class="relative w-44 h-60 my-6 flex items-end justify-center z-10">
+                                <svg class="absolute inset-0 w-full h-full text-white/20 filter drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 15 H70 V25 L85 105 A8 8 0 0 1 77 113 H23 A8 8 0 0 1 15 105 L30 25 Z" stroke="currentColor" stroke-width="3" fill="none"/>
+                                    <line x1="30" y1="40" x2="40" y2="40" stroke="currentColor" stroke-width="1.5" />
+                                    <line x1="28" y1="60" x2="45" y2="60" stroke="currentColor" stroke-width="1.5" />
+                                    <line x1="26" y1="80" x2="40" y2="80" stroke="currentColor" stroke-width="1.5" />
+                                    <line x1="24" y1="100" x2="45" y2="100" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
+
+                                <div id="beaker-liquid" class="w-[84%] bg-gradient-to-t from-brand-green/60 to-brand-green/40 rounded-b-md transition-all duration-1000 ease-in-out flex flex-col items-center justify-center relative overflow-hidden" style="height: 40%;">
+                                    <div class="absolute bottom-2 left-6 w-2 h-2 bg-white/40 rounded-full animate-bounce"></div>
+                                    <div class="absolute bottom-8 right-8 w-1 h-1 bg-white/40 rounded-full animate-pulse"></div>
+                                    <div class="absolute bottom-12 left-10 w-1.5 h-1.5 bg-white/30 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+                                    
+                                    <div id="liquid-text" class="text-xs font-bold text-white relative z-20 select-none">
+                                        基底 40%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recipe readout card -->
+                            <div class="bg-black/20 p-4 rounded-2xl w-full border border-white/5 text-center z-10 mb-4">
+                                <p class="text-xxs text-brand-gold/70 tracking-widest font-bold uppercase mb-1">調配秘方 (RECIPE)</p>
+                                <p class="text-sm font-semibold" id="recipe-name">個人化抗老亮白高保濕精華</p>
+                                <div class="flex flex-wrap gap-1.5 justify-center mt-3" id="active-booster-tags">
+                                    <span class="text-xxs bg-brand-green/30 px-2 py-0.5 rounded border border-brand-green text-brand-light-green">基底原液</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full text-center z-10 space-y-2">
+                                <button onclick="addCustomRecipeToCart()" class="w-full bg-brand-gold hover:bg-white text-brand-dark py-3 px-6 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/10">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <span>將客製化配方加入試算</span>
+                                </button>
+                                <a href="https://lin.ee/seoZIJS" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-white py-2.5 px-6 rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2">
+                                    <i class="fab fa-line text-green-400"></i>
+                                    <span>預約前往實體調配體驗</span>
+                                </a>
+                                <span class="text-xxs text-brand-light-green/50 block">
+                                    <i class="fas fa-info-circle mr-1"></i> 嘉義市店限定，自有化妝品廠原料保證
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROMOTIONS & TIERED GIFTS -->
+        <section id="promotions" class="py-20 bg-brand-beige">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-brand-green font-bold tracking-widest text-sm uppercase block">
+                        ✦ GRAND OPENING EXCLUSIVES ✦
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl serif-font font-bold text-gray-900">
+                        新門市開幕慶限定特惠
+                    </h2>
+                    <div class="h-1 w-16 bg-brand-green mx-auto rounded"></div>
+                    <p class="text-gray-500 text-sm sm:text-base">
+                        活動期間凡蒞臨全新嘉義民生北路門市，即可享有以下難得一見的高額特惠與奢華滿額禮遇！
+                    </p>
+                </div>
+
+                <!-- Featured Hero Pack: 奢華盛大組 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-brand-green/10 relative overflow-hidden mb-20 max-w-5xl mx-auto">
+                    <div class="absolute top-0 right-0 bg-brand-green text-white font-bold py-2.5 px-8 rounded-bl-3xl text-sm tracking-widest shadow-md z-10">
+                        <i class="fas fa-crown text-brand-gold mr-1"></i> 開幕慶奢華主推
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+                        <!-- Product Visual Mockup - 使用大圖的高精度裁剪 -->
+                        <div class="lg:col-span-5 flex justify-center relative">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-brand-gold to-brand-green/20 rounded-2xl opacity-10 blur-md"></div>
+                            
+                            <!-- 裁剪出大圖(DM 1) 中間部分的奢華盛大組 -->
+                            <div class="relative bg-white p-2 rounded-2xl shadow-md border border-gray-100 aspect-square w-full max-w-sm overflow-hidden group">
+                                <div class="dm1-crop w-full h-full rounded-xl flex items-center justify-center relative" style="background-size: 215% 280%; background-position: 22% 51%;">
+                                    <!-- 後備圖標 -->
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40 bg-brand-light-green/40">
+                                        <i class="fas fa-box-open text-4xl mb-2"></i>
+                                        <span class="text-xs font-semibold">奢華盛大組</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product info / Details text -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-brand-dark serif-font">
+                                奢華盛大組 
+                            </h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                專為追尋極致透亮與全方位修護的您設計。以大容量 90ml 玻尿酸為高保濕基底，完美結合多達 9 款 5ml 珍貴核心原液，一次解鎖極致美白、撫紋、彈力與舒緩功效。
+                            </p>
+
+                            <!-- Grid Ingredients List -->
+                            <div class="p-5 bg-brand-light-green/30 rounded-2xl border border-brand-green/10">
+                                <p class="text-xs font-bold text-brand-green tracking-widest mb-3 uppercase">
+                                    <i class="fas fa-list-check mr-1"></i> 完整組合內容
+                                </p>
+                                <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs sm:text-sm text-gray-700">
+                                    <div class="space-y-2">
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle-dot text-brand-green text-xs"></i> 玻尿酸精華 90ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle-dot text-brand-green text-xs"></i> 15%維他命C安瓶 13ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle-dot text-brand-green text-xs"></i> 淨白素顏霜 40g</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-blue-500 text-xxs"></i> 24 長效保濕原液 5ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-blue-300 text-xxs"></i> 瞬間補水原液 5ml</div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-purple-500 text-xxs"></i> 煥膚代謝原液 5ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-yellow-500 text-xxs"></i> 五胜肽撫紋原液 5ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-orange-400 text-xxs"></i> 彈力緊實原液 5ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-red-500 text-xxs"></i> 紅花寶黃酮原液 5ml</div>
+                                        <div class="flex items-center gap-2"><i class="fas fa-circle text-yellow-300 text-xxs"></i> 光采防護原液 5ml</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pricing + Add to Interactive Cart -->
+                            <div class="flex flex-wrap items-end justify-between gap-4 pt-2">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="text-3xl sm:text-4xl font-extrabold text-brand-accent">$5000</span>
+                                    <span class="text-sm sm:text-lg text-gray-400 line-through decoration-1">原價 $7750</span>
+                                    <span class="bg-brand-accent/10 text-brand-accent font-bold text-xs px-2.5 py-1 rounded-md">現省 $2750</span>
+                                </div>
+                                <button onclick="addToSimulatedCart('奢華盛大組', 5000, 7750)" class="bg-brand-dark text-white hover:bg-brand-green px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2 shadow-md">
+                                    <i class="fas fa-plus"></i> 加到試算區 (享滿額禮)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIERED GIFT VISUALIZER -->
+                <div class="mt-20">
+                    <div class="text-center mb-10">
+                        <span class="bg-brand-green text-white text-sm font-bold py-2 px-6 rounded-full inline-flex items-center gap-2 shadow-sm">
+                            <i class="fas fa-gift"></i> 開幕誌慶．單次消費滿額奢華贈
+                        </span>
+                    </div>
+
+                    <!-- Progress Bar Component -->
+                    <div class="max-w-4xl mx-auto bg-gray-200 h-4 rounded-full mb-12 relative shadow-inner overflow-visible">
+                        <div id="tier-progress" class="bg-gradient-to-r from-brand-gold to-brand-green h-4 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                        
+                        <!-- Marker points -->
+                        <div class="absolute top-1/2 left-[30%] -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                            <div class="w-6 h-6 rounded-full bg-white border-4 border-brand-green shadow flex items-center justify-center">
+                                <span class="text-xxs text-brand-green font-bold">1</span>
+                            </div>
+                            <span class="absolute top-7 left-1/2 -translate-x-1/2 font-bold text-xs text-brand-dark block w-16">滿 3000</span>
+                        </div>
+                        <div class="absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                            <div class="w-6 h-6 rounded-full bg-white border-4 border-brand-green shadow flex items-center justify-center">
+                                <span class="text-xxs text-brand-green font-bold">2</span>
+                            </div>
+                            <span class="absolute top-7 left-1/2 -translate-x-1/2 font-bold text-xs text-brand-dark block w-16">滿 5000</span>
+                        </div>
+                        <div class="absolute top-1/2 left-[100%] -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                            <div class="w-6 h-6 rounded-full bg-white border-4 border-brand-green shadow flex items-center justify-center">
+                                <span class="text-xxs text-brand-green font-bold">3</span>
+                            </div>
+                            <span class="absolute top-7 left-1/2 -translate-x-1/2 font-bold text-xs text-brand-dark block w-18">滿 10000</span>
+                        </div>
+                    </div>
+
+                    <!-- Tier Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                        <!-- Tier 1 Card -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-brand-green/10 shadow-md hover:shadow-lg transition-all relative flex flex-col justify-between animate-fade-in" id="tier-card-1">
+                            <div class="absolute -top-4 left-6 bg-brand-green text-white text-xs font-bold px-4 py-1.5 rounded-full z-10">
+                                TIER 01
+                            </div>
+                            <div class="space-y-4 pt-2">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-lg font-bold text-brand-dark serif-font">單次消費滿</span>
+                                    <span class="text-2xl font-bold text-brand-accent">$3000</span>
+                                </div>
+                                <div class="h-[1px] bg-gray-100"></div>
+                                <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-gift text-brand-gold mt-1"></i>
+                                        <span>贈送 <b>青春動能精華 10g</b></span>
+                                    </li>
+                                </ul>
+                                <!-- 滿額禮實體商品圖 - 裁剪 DM 1 底部第一個贈品 -->
+                                <div class="relative w-full h-32 bg-brand-beige rounded-xl overflow-hidden border border-gray-100">
+                                    <div class="dm1-crop w-full h-full" style="background-size: 320% 320%; background-position: 16% 87%;">
+                                        <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40 bg-brand-light-green/40">
+                                            <i class="fas fa-flask-vial text-3xl mb-1"></i>
+                                            <span class="text-xxs font-bold">10g 精華</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <div class="w-full bg-gray-50 py-2.5 px-4 rounded-xl flex items-center justify-center gap-3 text-xs text-gray-500">
+                                    <i class="fas fa-sparkles text-brand-gold"></i>
+                                    經典強效活膚修護精華
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tier 2 Card -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-brand-green/10 shadow-md hover:shadow-lg transition-all relative flex flex-col justify-between animate-fade-in" id="tier-card-2">
+                            <div class="absolute -top-4 left-6 bg-brand-gold text-brand-dark text-xs font-bold px-4 py-1.5 rounded-full z-10">
+                                TIER 02
+                            </div>
+                            <div class="space-y-4 pt-2">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-lg font-bold text-brand-dark serif-font">單次消費滿</span>
+                                    <span class="text-2xl font-bold text-brand-accent">$5000</span>
+                                </div>
+                                <div class="h-[1px] bg-gray-100"></div>
+                                <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-ticket text-brand-gold mt-1"></i>
+                                        <span>贈送 <b>$500 折價券乙張</b></span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-gift text-brand-gold mt-1"></i>
+                                        <span>精華 10g + 抗皺霜 10g + 膠原 4g</span>
+                                    </li>
+                                </ul>
+                                <!-- 滿額禮實體商品圖 - 裁剪 DM 1 底部第二個贈品組 -->
+                                <div class="relative w-full h-32 bg-brand-beige rounded-xl overflow-hidden border border-gray-100">
+                                    <div class="dm1-crop w-full h-full" style="background-size: 320% 320%; background-position: 48% 87%;">
+                                        <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40 bg-brand-light-green/40">
+                                            <i class="fas fa-gift text-3xl mb-1"></i>
+                                            <span class="text-xxs font-bold">三件奢華贈</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <div class="w-full bg-gray-50 py-2.5 px-4 rounded-xl flex items-center justify-center gap-3 text-xs text-gray-500">
+                                    <i class="fas fa-shield-halved text-brand-green"></i>
+                                    多重原液全方位奢華抗老
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tier 3 Card -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-brand-green/10 shadow-md hover:shadow-lg transition-all relative flex flex-col justify-between animate-fade-in" id="tier-card-3">
+                            <div class="absolute -top-4 left-6 bg-brand-dark text-brand-gold text-xs font-bold px-4 py-1.5 rounded-full z-10">
+                                TIER 03
+                            </div>
+                            <div class="space-y-4 pt-2">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="text-lg font-bold text-brand-dark serif-font">單次消費滿</span>
+                                    <span class="text-2xl font-bold text-brand-accent">$10000</span>
+                                </div>
+                                <div class="h-[1px] bg-gray-100"></div>
+                                <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-ticket text-brand-gold mt-1"></i>
+                                        <span>贈送 <b>$500 折價券兩張 ($1000)</b></span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-gift text-brand-gold mt-1"></i>
+                                        <span>五千禮全贈 + 胺基酸洗沐雙入 30ml</span>
+                                    </li>
+                                </ul>
+                                <!-- 滿額禮實體商品圖 - 裁剪 DM 1 底部第三個贈品組 -->
+                                <div class="relative w-full h-32 bg-brand-beige rounded-xl overflow-hidden border border-gray-100">
+                                    <div class="dm1-crop w-full h-full" style="background-size: 320% 320%; background-position: 80% 87%;">
+                                        <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40 bg-brand-light-green/40">
+                                            <i class="fas fa-crown text-3xl mb-1"></i>
+                                            <span class="text-xxs font-bold">十全大禮組</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <div class="w-full bg-gray-50 py-2.5 px-4 rounded-xl flex items-center justify-center gap-3 text-xs text-gray-500">
+                                    <i class="fas fa-crown text-brand-gold"></i>
+                                    全身奢華呵護，頂級享受
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATALOG SECTION & INTERACTIVE CALCULATOR -->
+        <section id="catalog" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-brand-green font-bold tracking-widest text-sm uppercase block">
+                        ✦ EXQUISITE CATALOG ✦
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl serif-font font-bold text-gray-900">
+                        完整開幕限定組合
+                    </h2>
+                    <div class="h-1 w-16 bg-brand-green mx-auto rounded"></div>
+                    <p class="text-gray-500 text-sm">
+                        點選喜愛的組合，立即加入下方「開幕禮遇計算機」進行滿額好禮試算，輕鬆解鎖極致贈品！
+                    </p>
+                </div>
+
+                <!-- Product Catalog Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Peak Elastic Wrinkle Pack (超・膨彈抗皺巔峰組) -->
+                    <div class="bg-white rounded-2xl shadow-md border border-brand-gold/30 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-gold text-brand-dark text-center py-2.5 font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-1.5 z-10">
+                                <i class="fas fa-star"></i> 明星保養組 (DM P.2)
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 的超・膨彈抗皺巔峰組 (上方正中央紅瓶) -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 250% 500%; background-position: 75% 7%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-flask text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">抗皺巔峰組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">超・膨彈抗皺巔峰組</h3>
+                                <p class="text-xs text-gray-500 leading-normal">嬰兒膠原安瓶 13ml 6入組</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5 font-semibold"><i class="fas fa-circle text-pink-300 text-xxs"></i> 6瓶入大規格</p>
+                                    <p>強效撫紋、緊緻再生</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$5000</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$7500</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $2500</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('超・膨彈抗皺巔峰組', 5000, 7500)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 1. 淨白恆亮青春組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                淨白恆亮青春組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 淨白恆亮青春組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 12% 35%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-droplet text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">恆亮青春組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">玻尿酸 + 三重調理原液</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 玻尿酸精華 90ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-300 text-xxs"></i> 瞬間補水原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-pink-300 text-xxs"></i> 淨荳肌亮原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-purple-400 text-xxs"></i> 煥膚代謝原液 5ml</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1299</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$1920</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $621</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('淨白恆亮青春組', 1299, 1920)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. 穩膚舒緩修護組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                穩膚舒緩修護組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 穩膚舒緩修護組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 37% 35%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-leaf text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">舒緩修護組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">玻尿酸 + 四重舒敏原液</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 玻尿酸精華 90ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-400 text-xxs"></i> 24 長效保濕原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-300 text-xxs"></i> 瞬間補水原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-green-400 text-xxs"></i> 七合一植萃舒敏原液 5ml</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1399</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$2110</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $711</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('穩膚舒緩修護組', 1399, 2110)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3. 極光鑽白閃耀組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                極光鑽白閃耀組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 極光鑽白閃耀組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 62% 35%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-magic text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">鑽白閃耀組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">雙重保濕 + 極效淨白</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 玻尿酸精華 90ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-300 text-xxs"></i> 瞬間補水原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle-notch text-gray-400 text-xxs"></i> 凍結黑色原液 10ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle-notch text-gray-400 text-xxs"></i> 淡化黑色原液 10ml</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$2199</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$3370</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $1171</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('極光鑽白閃耀組', 2199, 3370)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- More Products Grid (Rows 2 & 3) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                    
+                    <!-- 4. 彈力緊緻撫紋組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                彈力緊緻撫紋組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 彈力緊緻撫紋組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 88% 35%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-egg text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">緊緻撫紋組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">玻尿酸 + 胜肽緊緻彈力</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 玻尿酸精華 90ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-300 text-xxs"></i> 瞬間補水原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-yellow-500 text-xxs"></i> 五胜肽撫紋原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-orange-400 text-xxs"></i> 彈力緊實原液 5ml</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1699</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$2650</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $951</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('彈力緊緻撫紋組', 1699, 2650)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 5. 水光輕盈鎖水組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                水光輕盈鎖水組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 水光輕盈鎖水組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 12% 62%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-jar text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">輕盈水水霜</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">水水霜超值兩入組</h3>
+                                <p class="text-xs text-gray-500 leading-normal">亞馬遜水透水水霜 50g 2入組</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-check text-brand-green text-xxs"></i> 極致水感爆水凝霜</p>
+                                    <p>夏天鎖水修護聖品，清爽不黏</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1399</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$1980</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $581</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('水光輕盈鎖水組', 1399, 1980)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 6. 白皙肌因淨亮組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                白皙肌因淨亮組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 白皙肌因淨亮組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 37% 62%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-sparkles text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">肌因淨亮組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">淨白抗老複合原液組</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 玻尿酸精華 90ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-blue-400 text-xxs"></i> 24 長效保濕原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle-notch text-gray-400 text-xxs"></i> 凍結黑色原液 5ml</p>
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-circle text-purple-400 text-xxs"></i> 煥膚代謝原液 5ml</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1699</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$2580</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $881</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('白皙肌因淨亮組', 1699, 2580)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 7. 淨白C引力 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                淨白C引力
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 淨白C引力 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 62% 62%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-sun text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">淨白C引力</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">VC安瓶 + 素顏保濕</h3>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1.5 text-gray-600">
+                                    <p class="font-bold text-brand-dark">• 15%維他命C安瓶 13ml</p>
+                                    <p class="font-bold text-brand-dark">• 淨白素顏霜 40g</p>
+                                    <p class="text-gray-500">超高純度亮白防禦，給您宛如天生好膚質</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$2199</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$3200</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $1001</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('淨白C引力', 2199, 3200)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                    
+                    <!-- 8. 金緻晚霜臻選組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                金緻晚霜臻選組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 金緻晚霜臻選組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 88% 62%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-moon text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">金緻晚霜組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">胜肽晚霜超值兩入</h3>
+                                <p class="text-xs text-gray-500 leading-normal">亞馬遜胜肽晚霜 50g 2入組</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-check text-brand-green text-xxs"></i> 蘊含亞馬遜天然抗老胜肽</p>
+                                    <p>夜間黃金修護，深層抗皺滋潤</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1699</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$2500</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $801</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('金緻晚霜臻選組', 1699, 2500)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 9. 青春動能光燦全能組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                青春動能光燦全能組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 青春動能光燦全能組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 12% 88%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-fire text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">光燦全能組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">旗艦青春動能精華</h3>
+                                <p class="text-xs text-gray-500 leading-normal">青春動能精華 50ml 3入組</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-check text-brand-green text-xxs"></i> 品牌鎮店抗衰老精華</p>
+                                    <p>一抹深層澎彈，亮白與緊緻兼備</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$2699</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$4500</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $1801</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('青春動能光燦全能組', 2699, 4500)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 10. 極潤重生日常儀式組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                極潤重生日常儀式組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 極潤重生日常儀式組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 37% 88%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-glass-water text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">極潤神仙水</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">深海礦物極潤神仙水</h3>
+                                <p class="text-xs text-gray-500 leading-normal">海洋瑰寶極潤水 500ml 2入 + 110ml 1入</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-check text-brand-green text-xxs"></i> 蘊含微量元素海洋瑰寶水</p>
+                                    <p>強效舒緩、穩定乾癢，濕敷神水</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$1980</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$2980</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $1000</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('極潤重生日常儀式組', 1980, 2980)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 11. 胺基酸 B.B. 淨透洗沐組 -->
+                    <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="bg-brand-green/10 text-brand-green text-center py-2.5 font-bold text-xs tracking-wider">
+                                胺基酸 B.B. 淨透洗沐組
+                            </div>
+                            <!-- 裁剪出大圖(DM 2) 胺基酸 B.B. 淨透洗沐組 -->
+                            <div class="relative w-full h-48 bg-brand-beige overflow-hidden border-b border-gray-100">
+                                <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 61% 88%;">
+                                    <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                        <i class="fas fa-soap text-3xl mb-1"></i>
+                                        <span class="text-xxs font-bold">胺基酸洗沐組</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 space-y-3">
+                                <h3 class="font-bold text-gray-900 text-base">控油洗髮 + 溫和潔膚露</h3>
+                                <p class="text-xs text-gray-500 leading-normal">髮根舒洗露 330ml + Je伴潔膚露 330ml</p>
+                                <div class="bg-gray-50 p-3 rounded-lg text-xs space-y-1 text-gray-600">
+                                    <p class="flex items-center gap-1.5"><i class="fas fa-check text-brand-green text-xxs"></i> 高比例親膚性胺基酸</p>
+                                    <p>舒洗頭皮髮根，溫和柔嫩洗淨全身</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100 bg-gray-50/50">
+                            <div class="flex justify-between items-baseline mb-4">
+                                <div>
+                                    <span class="text-xl font-bold text-brand-accent">$700</span>
+                                    <span class="text-xxs text-gray-400 line-through block">$1120</span>
+                                </div>
+                                <span class="text-xxs bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded font-bold">省 $420</span>
+                            </div>
+                            <button onclick="addToSimulatedCart('胺基酸 B.B. 淨透洗沐組', 700, 1120)" class="w-full bg-brand-green hover:bg-brand-dark text-white py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1">
+                                <i class="fas fa-plus"></i> 加到試算區
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 flex justify-end">
+                    <!-- 12. 精油｜香氛自由配 (選三贈一) -->
+                    <div class="bg-gradient-to-r from-brand-green/10 to-brand-gold/10 rounded-2xl p-6 border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-6 w-full max-w-4xl">
+                        <!-- 裁剪出大圖(DM 2) 精油系列 -->
+                        <div class="relative w-32 h-32 bg-white rounded-xl overflow-hidden border border-gray-100 shrink-0 mx-auto sm:mx-0">
+                            <div class="dm2-crop w-full h-full" style="background-size: 450% 450%; background-position: 88% 88%;">
+                                <div class="fallback-icon hidden absolute inset-0 flex-col items-center justify-center text-brand-dark/40">
+                                    <i class="fas fa-bottle-droplet text-2xl mb-1"></i>
+                                    <span class="text-xxs font-bold">香氛精油</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-center sm:text-left flex-1">
+                            <span class="bg-brand-gold text-brand-dark font-bold px-3 py-1 rounded-full text-xxs tracking-wider uppercase inline-block">精油香氛限定</span>
+                            <h3 class="text-lg font-bold text-brand-dark serif-font">精油 ｜ 香氛自由配（買三送一）</h3>
+                            <p class="text-xs text-gray-600 max-w-lg">
+                                <b>三份日常，一份驚喜！</b> 定義您的居家調香儀式感。活動期間享 10ml 精油與香氛，買三送一（以低價者贈送，實體門市專屬搭配）。
+                            </p>
+                        </div>
+                        <div class="text-center sm:text-right min-w-[180px]">
+                            <span class="text-brand-accent text-lg font-bold block mb-2">門市現場自由搭配</span>
+                            <a href="https://lin.ee/seoZIJS" target="_blank" class="bg-brand-dark hover:bg-brand-green text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fab fa-line"></i> LINE 諮詢/預約香氛
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE PRICING CALCULATOR -->
+                <div class="mt-16 bg-brand-light-green/40 p-6 sm:p-10 rounded-3xl border border-brand-green/10 shadow-lg max-w-4xl mx-auto">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-green text-white rounded-xl flex items-center justify-center text-xl">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-dark serif-font">開幕慶購物車好禮試算</h3>
+                            <p class="text-xs text-gray-500">選取以上商品後，在此即時計算折抵並看您解鎖的超級好禮！</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                        <!-- Simulated Cart Items Left -->
+                        <div class="md:col-span-7 space-y-4">
+                            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm min-h-[160px] flex flex-col justify-between">
+                                <p class="text-xs text-gray-400 font-bold tracking-wider mb-2 uppercase">已選取試算項目：</p>
+                                
+                                <div id="cart-items-container" class="space-y-3 max-h-48 overflow-y-auto">
+                                    <div class="text-center text-gray-400 py-6 text-sm">
+                                        <i class="fas fa-basket-shopping text-3xl text-gray-200 block mb-2"></i>
+                                        尚未加入任何特惠組合
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-gray-100 text-sm">
+                                <span class="font-medium text-gray-500">原價總計：</span>
+                                <span class="text-gray-400 line-through" id="original-total">$0</span>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Output Right -->
+                        <div class="md:col-span-5 bg-white p-6 rounded-2xl border border-brand-green/20 shadow-md space-y-6">
+                            <div class="space-y-2">
+                                <span class="text-xs text-gray-400 font-bold block uppercase tracking-wider">特惠試算總計</span>
+                                <div class="flex items-baseline justify-between">
+                                    <span class="text-2xl sm:text-3xl font-extrabold text-brand-accent" id="promo-total">$0</span>
+                                    <span class="text-xxs bg-green-100 text-brand-green font-bold px-2 py-0.5 rounded" id="saving-tag">省 $0</span>
+                                </div>
+                            </div>
+
+                            <div class="h-[1px] bg-gray-100"></div>
+
+                            <!-- Reward unlocking readout -->
+                            <div class="space-y-3">
+                                <span class="text-xs font-bold text-brand-green block tracking-wider uppercase"><i class="fas fa-gift"></i> 已解鎖滿額好禮：</span>
+                                <div id="unlocked-gifts" class="text-sm space-y-2 text-gray-600 font-medium">
+                                    <p class="text-xs text-gray-400 italic">再消費滿 $3000 解鎖 Tier 01 好禮</p>
+                                </div>
+                            </div>
+
+                            <button onclick="copyCartToClipboard()" class="w-full bg-brand-green hover:bg-brand-dark text-white py-3.5 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 shadow-md">
+                                <i class="fas fa-copy"></i> 複製清單並使用 LINE 訂購
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Disclaimer banner -->
+                <div class="max-w-4xl mx-auto mt-12 text-center">
+                    <p class="text-xxs sm:text-xs text-white bg-brand-dark inline-block px-6 py-2.5 rounded-xl border border-brand-gold/30 shadow-md">
+                        <i class="fas fa-circle-info mr-1 text-brand-gold"></i> 本店保留隨時修改、變更本活動內容之權利，若有其他未盡事宜，依本店相關規定解釋。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STORE LOCATION & MAP -->
+        <section id="contact" class="py-20 bg-brand-light-green/20 border-t border-brand-green/10 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Store details left -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-3">
+                            <span class="text-brand-green font-bold tracking-widest text-sm uppercase block">✦ 誠摯邀請您蒞臨體驗 ✦</span>
+                            <h2 class="text-3xl sm:text-4xl serif-font font-bold text-gray-900">天然品 門市資訊</h2>
+                            <div class="h-1 w-16 bg-brand-gold rounded"></div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Address Card -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white text-brand-green shadow border border-gray-100 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 block tracking-wider uppercase">門市地址</span>
+                                    <p class="font-semibold text-brand-dark text-base sm:text-lg">嘉義市西區民生北路 332 號 1 樓</p>
+                                    <p class="text-xs text-gray-500 mt-1">深耕嘉義 20 餘年，僅此一家別無分號</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone Card -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white text-brand-green shadow border border-gray-100 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 block tracking-wider uppercase">聯絡電話</span>
+                                    <a href="tel:052250558" class="font-semibold text-brand-dark text-base sm:text-lg hover:text-brand-green transition-colors">(05) 2250558</a>
+                                </div>
+                            </div>
+
+                            <!-- Email Card -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white text-brand-green shadow border border-gray-100 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 block tracking-wider uppercase">聯絡信箱</span>
+                                    <a href="mailto:naturalmade332@gmail.com" class="font-semibold text-brand-dark text-base hover:text-brand-green transition-colors">naturalmade332@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Line Card -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white text-brand-green shadow border border-gray-100 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fab fa-line text-2xl text-green-500"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 block tracking-wider uppercase">官方 LINE</span>
+                                    <a href="https://lin.ee/seoZIJS" target="_blank" class="font-semibold text-brand-green text-base hover:underline transition-all">https://lin.ee/seoZIJS</a>
+                                    <span class="text-xxs block text-gray-400">點選加入好友，即時預約「愛玩美實驗室」DIY</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Directions button -->
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="https://maps.google.com/?q=嘉義市西區民生北路332號1樓" target="_blank" class="bg-brand-dark text-white hover:bg-brand-green py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide transition-all shadow flex items-center gap-2">
+                                <i class="fas fa-diamond-turn-right"></i> 導航至民生北路店
+                            </a>
+                            <a href="tel:052250558" class="bg-white border border-brand-green/20 text-brand-green hover:bg-brand-light-green/40 py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide transition-all flex items-center gap-2">
+                                <i class="fas fa-phone"></i> 撥打電話預約
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Interactive Map Placeholder & Visual Banner Right -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-4 rounded-3xl border border-brand-green/10 shadow-xl overflow-hidden space-y-4">
+                            <!-- Visual of the store exterior mock or elegant map banner -->
+                            <div class="relative w-full h-[280px] bg-brand-light-green/50 rounded-2xl overflow-hidden border border-gray-100 flex items-center justify-center">
+                                <div class="absolute inset-0 bg-radial-gradient(ellipse at center, rgba(58,125,100,0.05) 0%, transparent 80%)"></div>
+                                <div class="z-10 text-center p-6 space-y-4">
+                                    <div class="w-16 h-16 bg-brand-green text-white rounded-full mx-auto flex items-center justify-center text-3xl shadow-lg animate-bounce">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-brand-dark text-lg">嘉義市西區民生北路 332 號 1 樓</p>
+                                        <p class="text-xs text-gray-500">（近彰化銀行民生分行，交通停車便利）</p>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=嘉義市西區民生北路332號1樓" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-brand-green font-bold border-b border-brand-green pb-0.5 hover:text-brand-dark hover:border-brand-dark transition-all">
+                                        在 Google 地圖中開啟 <i class="fas fa-external-link-alt text-xxs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prompt Card -->
+                            <div class="p-4 bg-brand-gold/10 rounded-xl border border-brand-gold/20 flex items-start gap-3">
+                                <i class="fas fa-triangle-exclamation text-brand-gold text-lg shrink-0 mt-0.5"></i>
+                                <div class="text-xs text-brand-dark leading-relaxed">
+                                    <b>溫馨提示：</b>天然品深耕嘉義 20 餘年，本民生北路新門市為<b>全台僅此一家，別無分號</b>！為了保障您的肌膚安全與極致保養體驗，請認明民生北路門市或透過官方管道進行購買。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white border-t border-brand-gold/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                
+                <!-- Col 1: Brand Info (5 cols) -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img class="h-10 w-auto object-contain filter invert brightness-200" src="logo.jpg" alt="Naturel 天然品 LOGO" onerror="this.src='https://placehold.co/150x150/3a7d64/ffffff?text=Naturel'">
+                        <span class="serif-font font-bold text-xl tracking-wider text-brand-gold">天然品</span>
+                    </div>
+                    <p class="text-xs text-brand-light-green/70 leading-relaxed max-w-sm">
+                        打造嘉義人專屬的價值保養與輕奢香氛。深耕在地 20 餘年，攜手自有專業化妝品廠支持，提供安全無毒、高效溫和的頂級個人化護膚方案。
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation (3 cols) -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-bold text-sm text-brand-gold uppercase tracking-wider">快速連結</h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-brand-light-green/80">
+                        <a href="#about" class="hover:text-white transition-colors">品牌傳承</a>
+                        <a href="#lab" class="hover:text-white transition-colors">愛玩美體驗室</a>
+                        <a href="#promotions" class="hover:text-white transition-colors">開幕限定</a>
+                        <a href="#catalog" class="hover:text-white transition-colors">精選組合</a>
+                        <a href="#contact" class="hover:text-white transition-colors">聯絡我們</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Hours & Contact (4 cols) -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-bold text-sm text-brand-gold uppercase tracking-wider">聯絡與服務資訊</h4>
+                    <p class="text-xs text-brand-light-green/80 flex items-center gap-2">
+                        <i class="fas fa-location-arrow text-brand-gold w-4"></i> 嘉義市西區民生北路 332 號 1 樓
+                    </p>
+                    <p class="text-xs text-brand-light-green/80 flex items-center gap-2">
+                        <i class="fas fa-phone text-brand-gold w-4"></i> (05) 2250558
+                    </p>
+                    <p class="text-xs text-brand-light-green/80 flex items-center gap-2">
+                        <i class="fab fa-line text-brand-gold w-4"></i> LINE的好友搜尋: @seoZIJS
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="h-[1px] bg-white/10 my-8"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xxs text-brand-light-green/50">
+                <p>&copy; 2026 Naturel 天然品. All rights reserved. 版權所有，非經授權禁止複製。</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">隱私權保護政策</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white transition-colors">服務條款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC FOR MIXOLOGY AND PRICING CALCULATOR -->
+    <script>
+        // --- 智慧檢測本地 DM 圖片載入，如失敗則無縫啟用備用高雅漸層與 icon 佔位符 ---
+        const testImg1 = new Image();
+        testImg1.src = '699064497_1493536259232551_6738137329486016331_n.jpg';
+        testImg1.onerror = function() {
+            document.body.classList.add('fallback-active');
+        };
+
+        const testImg2 = new Image();
+        testImg2.src = '699200825_1493536359232541_4340831424092097616_n.jpg';
+        testImg2.onerror = function() {
+            document.body.classList.add('fallback-active');
+        };
+
+        // --- 1. MIXOLOGY LAB STATE & LOGIC ---
+        let selectedConcern = 'hydration';
+        let selectedBaseType = 'serum';
+        let selectedBoosters = [];
+
+        const skinConcernConfigs = {
+            hydration: {
+                title: "個人化極透補水精華",
+                basePercent: 40,
+                liquidColor: "from-blue-600/60 to-blue-400/40"
+            },
+            brightening: {
+                title: "個人化黃金淨白透亮精華",
+                basePercent: 40,
+                liquidColor: "from-yellow-500/60 to-yellow-300/40"
+            },
+            aging: {
+                title: "個人化極致胜肽緊緻精華",
+                basePercent: 40,
+                liquidColor: "from-purple-600/60 to-purple-400/40"
+            },
+            soothing: {
+                title: "個人化洋甘菊舒緩防護精華",
+                basePercent: 40,
+                liquidColor: "from-green-600/60 to-green-400/40"
+            }
+        };
+
+        const boosterConfigs = {
+            vitaminC: { name: "15%維他命C", color: "bg-yellow-400 text-yellow-900 border-yellow-400/30" },
+            peptides: { name: "五胜肽抗皺", color: "bg-purple-400 text-purple-900 border-purple-400/30" },
+            colla: { name: "嬰兒膠原澎潤", color: "bg-pink-400 text-pink-900 border-pink-400/30" },
+            botanical: { name: "七合一植萃", color: "bg-green-400 text-green-900 border-green-400/30" }
+        };
+
+        function updateBeakerVisualization() {
+            const liquid = document.getElementById('beaker-liquid');
+            const liquidText = document.getElementById('liquid-text');
+            const recipeName = document.getElementById('recipe-name');
+            const boosterTags = document.getElementById('active-booster-tags');
+
+            let totalVolume = 40 + (selectedBoosters.length * 20);
+            liquid.style.height = `${totalVolume}%`;
+            liquidText.innerText = `調配量 ${totalVolume}%`;
+
+            const config = skinConcernConfigs[selectedConcern];
+            
+            liquid.className = "w-[84%] rounded-b-md transition-all duration-1000 ease-in-out flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-t " + config.liquidColor;
+
+            let nameModifier = "";
+            if (selectedBoosters.length > 0) {
+                const names = selectedBoosters.map(b => boosterConfigs[b].name.substring(0, 3));
+                nameModifier = " • " + names.join(" + ");
+            }
+            recipeName.innerText = config.title + nameModifier;
+
+            let tagsHTML = `<span class="text-xxs bg-brand-green/30 px-2 py-0.5 rounded border border-brand-green text-brand-light-green">基底原液</span>`;
+            selectedBoosters.forEach(booster => {
+                const bConfig = boosterConfigs[booster];
+                tagsHTML += `<span class="text-xxs ${bConfig.color} px-2 py-0.5 rounded border font-semibold">${bConfig.name}</span>`;
+            });
+            boosterTags.innerHTML = tagsHTML;
+        }
+
+        function selectSkinConcern(concern, element) {
+            document.querySelectorAll('.skin-btn').forEach(btn => btn.classList.remove('active', 'border-brand-green', 'bg-brand-green/20'));
+            element.classList.add('active', 'border-brand-green', 'bg-brand-green/20');
+            selectedConcern = concern;
+            updateBeakerVisualization();
+        }
+
+        function selectBase(baseType) {
+            selectedBaseType = baseType;
+            
+            const serumLabel = document.getElementById('base-serum-label');
+            const creamLabel = document.getElementById('base-cream-label');
+            const essenceLabel = document.getElementById('base-essence-label');
+
+            [serumLabel, creamLabel, essenceLabel].forEach(l => {
+                l.classList.remove('border-brand-green', 'bg-brand-green/10');
+                l.classList.add('border-white/10', 'bg-white/5');
+            });
+
+            const activeLabel = document.getElementById(`base-${baseType}-label`);
+            activeLabel.classList.remove('border-white/10', 'bg-white/5');
+            activeLabel.classList.add('border-brand-green', 'bg-brand-green/10');
+            
+            updateBeakerVisualization();
+        }
+
+        function toggleBooster(boosterKey, element) {
+            const index = selectedBoosters.indexOf(boosterKey);
+            const activeBadge = element.querySelector('.active-badge');
+
+            if (index > -1) {
+                selectedBoosters.splice(index, 1);
+                element.classList.remove('border-brand-gold', 'bg-brand-green/30');
+                element.classList.add('border-white/10', 'bg-white/5');
+                activeBadge.classList.add('hidden');
+            } else {
+                if (selectedBoosters.length >= 3) {
+                    alert("為了確保原液的最佳穩定度，愛玩美客製化調配建議最多添加 3 款活性原液！");
+                    return;
+                }
+                selectedBoosters.push(boosterKey);
+                element.classList.remove('border-white/10', 'bg-white/5');
+                element.classList.add('border-brand-gold', 'bg-brand-green/30');
+                activeBadge.classList.remove('hidden');
+            }
+            updateBeakerVisualization();
+        }
+
+        // --- 2. PRICING & TIER CALCULATOR STATE & LOGIC ---
+        let cart = [];
+
+        function addToSimulatedCart(name, price, originalPrice) {
+            const existingItem = cart.find(i => i.name === name);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ name, price, originalPrice, qty: 1 });
+            }
+            updateCartDisplay();
+            document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function addCustomRecipeToCart() {
+            const config = skinConcernConfigs[selectedConcern];
+            let nameModifier = "";
+            if (selectedBoosters.length > 0) {
+                const names = selectedBoosters.map(b => boosterConfigs[b].name);
+                nameModifier = " (" + names.join(" + ") + ")";
+            } else {
+                nameModifier = " (經典純淨保濕)";
+            }
+            
+            const recipeFullName = `愛玩美客製配方 - ${config.title}${nameModifier}`;
+            addToSimulatedCart(recipeFullName, 1500, 2200);
+            alert("成功將客製化調配配方加入試算購物車！請至下方試算區查看解鎖禮物。");
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(i => i.name !== name);
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const container = document.getElementById('cart-items-container');
+            const originalTotalEl = document.getElementById('original-total');
+            const promoTotalEl = document.getElementById('promo-total');
+            const savingTag = document.getElementById('saving-tag');
+            const unlockedGiftsEl = document.getElementById('unlocked-gifts');
+            const progressEl = document.getElementById('tier-progress');
+
+            const tierCard1 = document.getElementById('tier-card-1');
+            const tierCard2 = document.getElementById('tier-card-2');
+            const tierCard3 = document.getElementById('tier-card-3');
+
+            [tierCard1, tierCard2, tierCard3].forEach(c => c.className = "bg-white rounded-2xl p-6 border-2 border-brand-green/10 shadow-md hover:shadow-lg transition-all relative flex flex-col justify-between");
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center text-gray-400 py-6 text-sm">
+                        <i class="fas fa-basket-shopping text-3xl text-gray-200 block mb-2"></i>
+                        尚未加入任何特惠組合
+                    </div>
+                `;
+                originalTotalEl.innerText = "$0";
+                promoTotalEl.innerText = "$0";
+                savingTag.innerText = "省 $0";
+                unlockedGiftsEl.innerHTML = `<p class="text-xs text-gray-400 italic">再消費滿 $3000 解鎖 Tier 01 好禮</p>`;
+                progressEl.style.width = "0%";
+                return;
+            }
+
+            let itemsHTML = '';
+            let originalTotalSum = 0;
+            let promoTotalSum = 0;
+
+            cart.forEach(item => {
+                originalTotalSum += item.originalPrice * item.qty;
+                promoTotalSum += item.price * item.qty;
+
+                itemsHTML += `
+                    <div class="flex items-center justify-between border-b border-gray-100 pb-2 text-sm">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-gray-800">${item.name}</span>
+                            <span class="block text-xxs text-gray-400">特惠 $${item.price} / 數量: ${item.qty}</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold text-brand-dark">$${item.price * item.qty}</span>
+                            <button onclick="removeFromCart('${item.name}')" class="text-gray-400 hover:text-brand-accent transition-colors">
+                                <i class="fas fa-trash-can text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = itemsHTML;
+            originalTotalEl.innerText = `$${originalTotalSum}`;
+            promoTotalEl.innerText = `$${promoTotalSum}`;
+            savingTag.innerText = `省 $${originalTotalSum - promoTotalSum}`;
+
+            let unlockedHTML = '';
+            let progressPercent = 0;
+
+            if (promoTotalSum >= 10000) {
+                progressPercent = 100;
+                tierCard3.className = "bg-white rounded-2xl p-6 border-2 border-brand-dark shadow-xl hover:shadow-2xl transition-all relative flex flex-col justify-between transform -translate-y-1 scale-[1.01]";
+                unlockedHTML = `
+                    <div class="space-y-1.5 text-xs sm:text-sm">
+                        <p class="text-brand-accent font-bold"><i class="fas fa-circle-check"></i> 已全數解鎖最高規格滿額好禮：</p>
+                        <p class="pl-4 font-semibold text-gray-700">• $500 元折價券兩張 ($1000 價值)</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 青春動能精華 10g + 逆齡抗皺霜 10g</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 嬰兒膠原安瓶 4g</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 胺基酸 B.B. 髮根舒洗露 30ml</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 胺基酸 B.B. Je伴潔膚露 30ml</p>
+                    </div>
+                `;
+            } else if (promoTotalSum >= 5000) {
+                progressPercent = 70;
+                tierCard2.className = "bg-white rounded-2xl p-6 border-2 border-brand-gold shadow-xl hover:shadow-2xl transition-all relative flex flex-col justify-between transform -translate-y-1 scale-[1.01]";
+                const neededForNext = 10000 - promoTotalSum;
+                unlockedHTML = `
+                    <div class="space-y-1.5 text-xs sm:text-sm">
+                        <p class="text-brand-green font-bold"><i class="fas fa-circle-check"></i> 已解鎖滿 5000 門檻禮：</p>
+                        <p class="pl-4 font-semibold text-gray-700">• $500 元折價券乙張</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 青春動能精華 10g + 逆齡抗皺霜 10g</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 嬰兒膠原安瓶 4g</p>
+                        <p class="text-xxs text-gray-400 mt-2 italic"><i class="fas fa-circle-info"></i> 再消費滿 $${neededForNext} 即可解鎖頂級十全大禮！</p>
+                    </div>
+                `;
+            } else if (promoTotalSum >= 3000) {
+                progressPercent = 40;
+                tierCard1.className = "bg-white rounded-2xl p-6 border-2 border-brand-green shadow-xl hover:shadow-2xl transition-all relative flex flex-col justify-between transform -translate-y-1 scale-[1.01]";
+                const neededForNext = 5000 - promoTotalSum;
+                unlockedHTML = `
+                    <div class="space-y-1.5 text-xs sm:text-sm">
+                        <p class="text-brand-green font-bold"><i class="fas fa-circle-check"></i> 已解鎖滿 3000 門檻禮：</p>
+                        <p class="pl-4 font-semibold text-gray-700">• 青春動能精華 10g</p>
+                        <p class="text-xxs text-gray-400 mt-2 italic"><i class="fas fa-circle-info"></i> 再消費滿 $${neededForNext} 即可解鎖 5000 頂級多重禮！</p>
+                    </div>
+                `;
+            } else {
+                const neededForNext = 3000 - promoTotalSum;
+                progressPercent = (promoTotalSum / 3000) * 30; 
+                unlockedHTML = `
+                    <p class="text-xs text-gray-400 italic">再消費滿 $${neededForNext} 即可解鎖 Tier 01 青春動能精華！</p>
+                `;
+            }
+
+            progressEl.style.width = `${progressPercent}%`;
+            unlockedGiftsEl.innerHTML = unlockedHTML;
+        }
+
+        function copyCartToClipboard() {
+            if (cart.length === 0) {
+                alert("試算購物車是空的，快去點選想買的特惠組合吧！");
+                return;
+            }
+
+            let promoTotalSum = 0;
+            let copyText = "【天然品開幕誌慶 - 我想諮詢/訂購特惠組】\n\n我的試算清單：\n";
+            cart.forEach(item => {
+                promoTotalSum += item.price * item.qty;
+                copyText += `• ${item.name} (數量: ${item.qty}) - 特惠單價: $${item.price}\n`;
+            });
+
+            copyText += `\n估計總計金額：$${promoTotalSum}\n`;
+
+            if (promoTotalSum >= 10000) {
+                copyText += "已解鎖滿額禮：滿萬尊爵十全大禮\n";
+            } else if (promoTotalSum >= 5000) {
+                copyText += "已解鎖滿額禮：滿五千尊奢大禮\n";
+            } else if (promoTotalSum >= 3000) {
+                copyText += "已解鎖滿額禮：滿三千基本好禮\n";
+            }
+
+            copyText += "\n請協助我安排民生北路店調配預約或現貨留存，謝謝！";
+
+            const el = document.createElement('textarea');
+            el.value = copyText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            alert("已成功複製訂購清單！即將開啟 LINE 視窗，您可以直接貼上傳送給諮詢專員！");
+            window.open("https://lin.ee/seoZIJS", "_blank");
+        }
+
+        window.onload = function() {
+            updateBeakerVisualization();
+        };
+    </script>
+</body>
+</html>
